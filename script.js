@@ -20,7 +20,7 @@ const pressureElement = document.getElementById('pressure');
 const forecastContainer = document.getElementById('forecastContainer');
 
 // API Key - Replace with your actual OpenWeatherMap API key
-const apiKey = '5a903db8137b00c298450af87dfb49b7';
+const apiKey = 'Your_Api_key';
 let currentUnit = 'metric'; // Default to Celsius
 
 // Event Listeners
