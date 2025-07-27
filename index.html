@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere - Real-time Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient">
+    <div class="container my-5">
+        <!-- Header -->
+        <header class="text-center mb-4">
+            <h1 class="display-4 font-weight-bold">WeatherSphere</h1>
+            <p class="lead">Real-time weather information at your fingertips</p>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            <!-- Search Section -->
+            <div class="weather-card p-4 mb-4">
+                <div class="input-group mb-3">
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        placeholder="Enter city name..." 
+                        class="form-control"
+                    >
+                    <div class="input-group-append">
+                        <button 
+                            id="searchBtn" 
+                            class="btn btn-outline-secondary"
+                        >
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="btn-group" role="group">
+                        <button id="celsiusBtn" class="btn btn-primary active">°C</button>
+                        <button id="fahrenheitBtn" class="btn btn-secondary">°F</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Current Weather Display -->
+            <div id="weatherDisplay" class="weather-card p-4 mb-4 text-center d-none">
+                <div class="d-flex justify-content-between mb-3">
+                    <div>
+                        <h2 id="location" class="h4"></h2>
+                        <p id="date" class="text-muted"></p>
+                    </div>
+                    <div id="currentTemp" class="h1"></div>
+                </div>
+                
+                <div class="mb-3">
+                    <div id="weatherIcon" class="display-4"></div>
+                    <p id="weatherDesc" class="h5"></p>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="bg-light p-3 rounded">
+                            <i class="fas fa-temperature-low"></i>
+                            <p>Feels Like</p>
+                            <p id="feelsLike" class="font-weight-bold"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bg-light p-3 rounded">
+                            <i class="fas fa-tint"></i>
+                            <p>Humidity</p>
+                            <p id="humidity" class="font-weight-bold"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bg-light p-3 rounded">
+                            <i class="fas fa-wind"></i>
+                            <p>Wind Speed</p>
+                            <p id="windSpeed" class="font-weight-bold"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bg-light p-3 rounded">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            <p>Pressure</p>
+                            <p id="pressure" class="font-weight-bold"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Forecast Section -->
+            <div id="forecastSection" class="weather-card p-4 d-none">
+                <h3 class="h5 font-weight-bold mb-3">5-Day Forecast</h3>
+                <div id="forecastContainer" class="row"></div>
+            </div>
+            
+            <!-- Error Message -->
+            <div id="errorMessage" class="weather-card p-4 text-center d-none">
+                <i class="fas fa-exclamation-triangle text-warning mb-3" style="font-size: 2rem;"></i>
+                <h3 class="h5 font-weight-bold mb-2">City Not Found</h3>
+                <p>Please check the city name and try again.</p>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-4 text-muted">
+            <p>Powered by OpenWeatherMap API</p>
+            <p>© 2025 WeatherSphere - All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

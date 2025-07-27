@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s;
+}
+
+.weather-card:hover {
+    transform: scale(1.02);
+}
+
+h1, h2, h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#searchBtn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#searchBtn:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap Primary */
+    border-color: #007bff;
+}
+
+.btn-primary.active {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Bootstrap Secondary */
+    border-color: #6c757d;
+}
+
+.btn-secondary.active {
+    background-color: #5a6268; /* Darker Gray */
+}
+
+.bg-light {
+    background-color: rgba(255, 255, 255, 0.2) !important; /* Light background for cards */
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.7) !important; /* Muted text color */
+}
+
+#weatherIcon {
+    color: #ffcc00; /* Gold color for weather icons */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+#weatherDisplay {
+    animation: float 6s ease-in-out infinite;
+}
